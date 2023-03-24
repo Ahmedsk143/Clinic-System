@@ -43,7 +43,7 @@
     </div>
     <div><span class="sub">Phone:</span>{{ nextPatient.phoneNumber }}</div>
     <div>
-      <span class="sub">Date:</span>{{ nextPatient.date | date: "dd/M/yyyy" }}
+      <span class="sub">Date:</span>{{ nextPatient.date | date : "dd/M/yyyy" }}
       {{ nextPatient.waitingTime }}
     </div>
     <div>
@@ -78,8 +78,8 @@
           <i class="fa-solid fa-user-xmark"></i>
         </button>
         <button
-          class="btn-1"
-          routerLink="../patients/{{ nextPatient._id }}"
+          class="btn-01"
+          routerLink="../patients/{{ this.patient._id }}"
           *ngIf="type == 'doctor' && nextPatient.name"
         >
           Add Check
@@ -96,7 +96,7 @@
       </div>
       <div><span class="sub">Phone:</span>{{ patient.phoneNumber }}</div>
       <div>
-        <span class="sub">Date:</span>{{ patient.date | date: "dd/M/yyyy" }}
+        <span class="sub">Date:</span>{{ patient.date | date : "dd/M/yyyy" }}
         {{ patient.waitingTime }}
       </div>
       <div>
